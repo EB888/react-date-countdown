@@ -37,17 +37,16 @@ class Clock extends Component {
     const minutes = Math.floor((time/1000/60)%60);
     const hours = Math.floor(time/(1000*60*60)%24);
     const days = Math.floor(time/(1000*60*60*24));
-    // this.setState({days: days});
-    // this.setState({hours: hours});
-    // this.setState({minutes: minutes});
-    // this.setState({seconds: seconds});
+    this.setState({days: days});
+    this.setState({hours: hours});
+    this.setState({minutes: minutes});
+    this.setState({seconds: seconds});
     //
     // ES6 Syntax allows you to write this shorthand w/o both Key and Value
-    this.setState({days, hours, minutes, seconds});
+    // this.setState({days, hours, minutes, seconds});
   }
 
   render() {
-
     return(
       <div>
         <div className='Clock-days'>{this.leading0(this.state.days)} Days</div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Clock from './Clock';
+import Stopwatch from './Stopwatch';
 import './App.css';
 import { Form, FormControl, Button } from 'react-bootstrap';
 
@@ -15,7 +16,6 @@ class App extends Component {
   changeDeadline(){
     // this.setState({deadline: 'August 29, 2017'})
     // Never mutate or change state directly
-    // console.log('state', this.state);
     this.setState({deadline: this.state.newDeadline})
   }
 
@@ -35,7 +35,7 @@ class App extends Component {
           />
           <Button onClick={() => this.changeDeadline()}>Submit</Button>
         </Form>
-
+        <Stopwatch />
       </div>
     )
   }
