@@ -26,7 +26,8 @@ class Clock extends Component {
     //   return '0'+ num;
     // }
     // return num;
-    // can also just write:
+
+    // can also just write a ternary expression:
     return num < 10 ? '0' + num : num;
   }
 
